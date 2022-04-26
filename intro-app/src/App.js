@@ -1,7 +1,9 @@
+import Navbar from './components/Navbar/index';
+
 function App() {
   return (
     <div className="">
-      <h1>Creating An Intro with Dropdown Navigation</h1>
+      <Navbar />
     </div>
   );
 }
