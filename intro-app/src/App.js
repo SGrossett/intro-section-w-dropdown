@@ -2,7 +2,7 @@ import Navbar from './components/Navbar/index';
 
 function App() {
   return (
-    <div className="">
+    <div>
       <Navbar />
     </div>
   );
