@@ -1,8 +1,9 @@
-import { Menu, Transition } from '@headlessui/react';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { useState, Fragment } from 'react'
-import { Popover } from '@headlessui/react'
+import Media from 'react-media';
 import { usePopper } from 'react-popper';
+import { useState, Fragment } from 'react';
+import { Popover } from '@headlessui/react';
+import { Menu, Transition } from '@headlessui/react';
+import { Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './css/navbar.css';
@@ -16,149 +17,158 @@ import planning from '../../images/icon-planning.svg';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 
 
-
-function IntroNav() {
+function InfoNav() {
   let [referenceElement, setReferenceElement] = useState()
   let [popperElement, setPopperElement] = useState()
   let { styles, attributes } = usePopper(referenceElement, popperElement)
 
   return (
     <div>
-      <Navbar collapseOnSet expand='sm' bg='info'>
-        <Navbar.Brand>snap</Navbar.Brand>
-        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-        <Navbar.Collapse id='responsive-navbar-nav'>
-          <Nav className='me-auto'>
-            {/* <Nav.Link href='#'>
-              <Popover className="position-relative">
-                {({ open }) => (
-                  <>
-                    <Popover.Button className='dropdown-link headless-link'>
-                      <span>Features
-                        <span  className='ml-05'>
-                          { open ? (<img src={arrowUp} />) : (<img src={arrowDown} /> )}
-                        </span>
-                      </span>
-                      
-                    </Popover.Button>
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-200"
-                      enterFrom="opacity-0 translate-y-1"
-                      enterTo="opacity-100 translate-y-0"
-                      leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 translate-y-0"
-                      leaveTo="opacity-0 translate-y-1"
-                    >
-                      <Popover.Panel 
-                        ref={setPopperElement}
-                        style={styles.popper}
-                        {...attributes.popper}
-                        className="postion-absolut"
-                      >                
-                        <div className="dropdown dropdown-menu show">
-                          <div>
-                            {features.map((item) => (
-                              <a
-                                key={item.name}
-                                href={item.href}
-                                className="d-flex align-items-center dropdown-item"
-                              >
-                                <div className="d-flex items-center justify-content-center">
-                                  <img
-                                    src={item.icon}
-                                    aria-hidden="true" 
-                                  />
+      <Media queries={{
+        small: "(max-width: 599px)",
+        medium: "(min-width: 600px) and (max-width: 1199px)",
+        large: "(min-width: 1200px)"
+      }}>
+        {matches => (
+          <Fragment>
+            {matches.small && 
+            
+            <p>I am small!</p>}
+            {matches.medium && <Navbar collapseOnSet expand='sm' bg='light'>
+              <Navbar.Brand>snap</Navbar.Brand>
+              <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+              <Navbar.Collapse 
+                id='responsive-navbar-nav'
+                aria-labelledby="offcanvasNavbarLabel"
+                placement="end"
+              >
+                  <Nav className='me-auto'>
+                  
+                    <Nav.Link href='#'>
+                      <Popover className="position-relative">
+                        {({ open }) => (
+                          <>
+                            <Popover.Button className='dropdown-link headless-link'>
+                              <span>Features
+                                <span  className='ml-05'>
+                                  { open ? (<img src={arrowUp} />) : (<img src={arrowDown} /> )}
+                                </span>
+                              </span>
+                              
+                            </Popover.Button>
+                            <Transition
+                              as={Fragment}
+                              enter="transition ease-out duration-200"
+                              enterFrom="opacity-0 translate-y-1"
+                              enterTo="opacity-100 translate-y-0"
+                              leave="transition ease-in duration-150"
+                              leaveFrom="opacity-100 translate-y-0"
+                              leaveTo="opacity-0 translate-y-1"
+                            >
+                              <Popover.Panel 
+                                ref={setPopperElement}
+                                style={styles.popper}
+                                {...attributes.popper}
+                                className="postion-absolut"
+                              >                
+                                <div className="dropdown dropdown-menu show">
+                                  <div>
+                                    {features.map((item) => (
+                                      <a
+                                        key={item.name}
+                                        href={item.href}
+                                        className="d-flex align-items-center dropdown-item"
+                                      >
+                                        <div className="d-flex items-center justify-content-center">
+                                          <img
+                                            src={item.icon}
+                                            aria-hidden="true" 
+                                          />
+                                        </div>
+                                        <div className="ml-075">
+                                            {item.name}
+                                        </div>
+                                      </a>
+                                    ))}
+                                  </div>
                                 </div>
-                                <div className="ml-075">
-                                    {item.name}
+                              </Popover.Panel>
+                            </Transition>
+                          </>
+                        )}
+                      </Popover>
+                    </Nav.Link>
+                    <Nav.Link href='#'>
+                      <Popover className="position-relative">
+                        {({ open }) => (
+                          <>
+                            <Popover.Button className='dropdown-link headless-link'>
+                              <span>Company
+                                <span  className='ml-05'>
+                                  { open ? (<img src={arrowUp} />) : (<img src={arrowDown} /> )}
+                                </span>
+                              </span>
+                              
+                            </Popover.Button>
+                            <Transition
+                              as={Fragment}
+                              enter="transition ease-out duration-200"
+                              enterFrom="opacity-0 translate-y-1"
+                              enterTo="opacity-100 translate-y-0"
+                              leave="transition ease-in duration-150"
+                              leaveFrom="opacity-100 translate-y-0"
+                              leaveTo="opacity-0 translate-y-1"
+                            >
+                              <Popover.Panel 
+                                ref={setPopperElement}
+                                style={styles.popper}
+                                {...attributes.popper}
+                                className="postion-absolut"
+                              >                
+                                <div className="dropdown dropdown-menu show">
+                                  <div>
+                                    {company.map((item) => (
+                                      <a
+                                        key={item.name}
+                                        href={item.href}
+                                        className="d-flex align-items-center dropdown-item"
+                                      >
+                                        <div className="ml-075">
+                                            {item.name}
+                                        </div>
+                                      </a>
+                                    ))}
+                                  </div>
                                 </div>
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </Popover.Panel>
-                    </Transition>
-                  </>
-                )}
-              </Popover>
-            </Nav.Link>
-            <Nav.Link href='#'>
-              <Popover className="position-relative">
-                {({ open }) => (
-                  <>
-                    <Popover.Button className='dropdown-link headless-link'>
-                      <span>Company
-                        <span  className='ml-05'>
-                          { open ? (<img src={arrowUp} />) : (<img src={arrowDown} /> )}
-                        </span>
-                      </span>
-                      
-                    </Popover.Button>
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-200"
-                      enterFrom="opacity-0 translate-y-1"
-                      enterTo="opacity-100 translate-y-0"
-                      leave="transition ease-in duration-150"
-                      leaveFrom="opacity-100 translate-y-0"
-                      leaveTo="opacity-0 translate-y-1"
-                    >
-                      <Popover.Panel 
-                        ref={setPopperElement}
-                        style={styles.popper}
-                        {...attributes.popper}
-                        className="postion-absolut"
-                      >                
-                        <div className="dropdown dropdown-menu show">
-                          <div>
-                            {company.map((item) => (
-                              <a
-                                key={item.name}
-                                href={item.href}
-                                className="d-flex align-items-center dropdown-item"
-                              >
-                                <div className="ml-075">
-                                    {item.name}
-                                </div>
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </Popover.Panel>
-                    </Transition>
-                  </>
-                )}
-              </Popover>
-            </Nav.Link> */}
-            <Nav.Link href='#'>Careers</Nav.Link>
-            <Nav.Link href='#'>About</Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link href='#'>Login</Nav.Link>
-            <Nav.Link href='#'>Register</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-        
-       
-      </Navbar>
-
-      <p>Testing testing</p>
-      <Navbar>
-        <Nav>
-          <NavDropdown title="proucts">
-            <NavDropdown.Item href="#">Tea</NavDropdown.Item>
-            <NavDropdown.Item href="#">Coffee</NavDropdown.Item>
-            <NavDropdown.Item href="#">Juice</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-      </Navbar>
-       
+                              </Popover.Panel>
+                            </Transition>
+                          </>
+                        )}
+                      </Popover>
+                    </Nav.Link>
+                    <Nav.Link href='#'>Careers</Nav.Link>
+                    <Nav.Link href='#'>About</Nav.Link>
+                  </Nav>
+                  <Nav>
+                    <Nav.Link href='#'>Login</Nav.Link>
+                    <Nav.Link href='#'>Register</Nav.Link>
+                  </Nav>
+                
+              
+              </Navbar.Collapse>
+              
+            
+            </Navbar>}
+            {matches.large && <p>I am large!</p>}
+          </Fragment>
+        )}
+      </Media>
     </div>
-  )
+  );
 }
 
-export default IntroNav;
+export default InfoNav;
+
 
 const features = [
   {
