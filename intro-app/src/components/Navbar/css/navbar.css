@@ -1,0 +1,22 @@
+.dropdown-link {
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.55);
+  background-color: transparent;
+}
+.dropdown {
+  border: none;
+  margin-top: 2.5rem;
+  border-radius: 0.5rem;
+  min-width: auto !important;
+  box-shadow: 0 3px 30px 5px rgb(0 0 0 / 20%);
+}
+
+.ml-075 {
+  margin-left: 0.75rem;
+}
+
+.ml-05 {
+  margin-left: 0.5rem;
+}
