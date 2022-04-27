@@ -39,7 +39,7 @@ function IntroNav() {
         {({ open }) => (
           <>
              <Popover.Button className='dropdown-link'>
-                <span>Solutions
+                <span>Features
                   <span  className='ml-05'>
                     { open ? (<img src={arrowUp} />) : (<img src={arrowDown} /> )}
                   </span>
