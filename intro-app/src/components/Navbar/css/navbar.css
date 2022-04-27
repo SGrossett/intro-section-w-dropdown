@@ -12,7 +12,9 @@
   min-width: auto !important;
   box-shadow: 0 3px 30px 5px rgb(0 0 0 / 20%);
 }
-
+.headless-link {
+  padding: 0 !important;;
+}
 .ml-075 {
   margin-left: 0.75rem;
 }
