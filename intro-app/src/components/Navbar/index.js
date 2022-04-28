@@ -1,21 +1,20 @@
 import Media from 'react-media';
 import { usePopper } from 'react-popper';
 import { useState, Fragment } from 'react';
-import { Menu, Transition } from '@headlessui/react';
-import { Popover, Disclosure } from '@headlessui/react';
-import { Nav, Navbar, NavDropdown, Offcanvas, Container } from 'react-bootstrap';
+import { Transition } from '@headlessui/react';
+import { Popover } from '@headlessui/react';
+import { Nav, Navbar, Container } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './css/navbar.css';
 
+import OffCanvasNav from '../OffcanvasNav/index';
 import arrowDown from '../../images/icon-arrow-down.svg';
 import arrowUp from '../../images/icon-arrow-up.svg';
 import todo from '../../images/icon-todo.svg';
 import calendar from '../../images/icon-calendar.svg';
 import reminders from '../../images/icon-reminders.svg';
 import planning from '../../images/icon-planning.svg';
-import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
-
 
 function InfoNav() {
   let [referenceElement, setReferenceElement] = useState()
@@ -30,117 +29,19 @@ function InfoNav() {
       }}>
         {matches => (
           <Fragment>
-            {matches.small && 
-            
-            <Navbar collapseOnSet expand='sm' bg='light'>
-              <Container fluid>
-                <Navbar.Brand className='mr-2'>
-                  <h2 className='ml-102'>snap</h2>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls='offcanvasNavbar' />
-                <Navbar.Offcanvas 
-                  id='offcanvasNavbar'
-                  aria-labelledby="offcanvasNavbarLabel"
-                  placement="end"
-                >
-                  <Offcanvas.Header closeButton>
-                    <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>
-                  </Offcanvas.Header>
-                  
-                  <Offcanvas.Body>
-                    <Nav>
-                      <Nav.Link href='#'>
-                      <Disclosure>
-                        {({ open }) => (
-                          <>
-                            <Disclosure.Button className="dropdown-link headless-link">
-                              <span>Features
-                                <span  className='ml-05'>
-                                  { open ? (<img src={arrowUp} />) : (<img src={arrowDown} /> )}
-                                </span>
-                              </span>
-                            </Disclosure.Button>
-                            <Disclosure.Panel className="px-2 pt-2">
-                            <div>
-                                      {features.map((item) => (
-                                        <a
-                                          key={item.name}
-                                          href={item.href}
-                                          className="d-flex align-items-center dropdown-item pt-2 text-gray"
-                                        >
-                                          <div className="d-flex items-center justify-content-center">
-                                            <img
-                                              src={item.icon}
-                                              aria-hidden="true" 
-                                            />
-                                          </div>
-                                          <div className="ml-075">
-                                              {item.name}
-                                          </div>
-                                        </a>
-                                      ))}
-                                    </div>
-                            </Disclosure.Panel>
-                          </>
-                        )}
-                      </Disclosure>
-                      </Nav.Link>
-                      <Nav.Link href='#'>
-                      <Disclosure>
-                        {({ open }) => (
-                          <>
-                            <Disclosure.Button className="dropdown-link headless-link">
-                              <span>Company
-                                <span  className='ml-05'>
-                                  { open ? (<img src={arrowUp} />) : (<img src={arrowDown} /> )}
-                                </span>
-                              </span>
-                            </Disclosure.Button>
-                            <Disclosure.Panel className="px-0 pt-2">
-                            <div>
-                              {company.map((item) => (
-                                <a
-                                  key={item.name}
-                                  href={item.href}
-                                  className="d-flex align-items-center dropdown-item pt-2 text-gray"
-                                >
-                                  <div className="ml-075">
-                                      {item.name}
-                                  </div>
-                                </a>
-                              ))}
-                            </div>
-                            </Disclosure.Panel>
-                          </>
-                        )}
-                      </Disclosure>
-                      </Nav.Link>
-                      <Nav.Link href='#' className='text-gray'>Careers</Nav.Link>
-                      <Nav.Link href='#' className='text-gray'>About</Nav.Link>
-                    </Nav>
-                    <Nav>
-                      <Nav.Link href='#' className='text-gray d-flex justify-content-center mt-3'>Login</Nav.Link>
-                      <Nav.Link href='#' className='text-gray d-flex justify-content-center mt-1 border border-dark rounded-button'>Register</Nav.Link>
-                    </Nav>
-                  </Offcanvas.Body>
-                </Navbar.Offcanvas>
-              </Container>
-            </Navbar>}
-
+            {matches.small && <OffCanvasNav /> }
             {matches.medium && 
-            
-            <Navbar collapseOnSet expand='sm' bg='light'>
-              <Container >
-
-                <Navbar.Brand>
-                  <h2 className='snap-right-margin'>snap</h2>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-                <Navbar.Collapse 
-                  id='responsive-navbar-nav'
-                  aria-labelledby="offcanvasNavbarLabel"
-                  placement="end"
-                >
+              <Navbar collapseOnSet expand='sm' bg='light'>
+                <Container >
+                  <Navbar.Brand>
+                    <h2 className='snap-right-margin'>snap</h2>
+                  </Navbar.Brand>
+                  <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+                  <Navbar.Collapse 
+                    id='responsive-navbar-nav'
+                    aria-labelledby="offcanvasNavbarLabel"
+                    placement="end"
+                  >
                     <Nav className='me-auto'>
                     
                       <Nav.Link href='#'>
@@ -252,8 +153,6 @@ function InfoNav() {
                       <Nav.Link href='#' >Login</Nav.Link>
                       <Nav.Link href='#' className="ml-102 px-105 border border-dark rounded-button register-padding">Register</Nav.Link>
                     </Nav>
-                  
-                
                 </Navbar.Collapse>
               </Container>
             </Navbar>
