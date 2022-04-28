@@ -32,7 +32,7 @@ function InfoNav() {
             {matches.small && <OffCanvasNav /> }
             {matches.medium && 
               <Navbar collapseOnSet expand='sm' bg='light'>
-                <Container >
+                <Container className='m-nav-container'>
                   <Navbar.Brand>
                     <h2 className='snap-right-margin'>snap</h2>
                   </Navbar.Brand>

@@ -1,0 +1,14 @@
+.headline {
+  font-weight: 800;
+}
+
+.content {
+  text-align: center;
+}
+.learn {
+  background-color: #000;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 15px;
+}
