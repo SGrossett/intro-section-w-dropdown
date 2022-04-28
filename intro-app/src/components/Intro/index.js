@@ -27,11 +27,19 @@ function Intro() {
               <h1 className='mt-5 headline'>Make remote work</h1>
               <p className='mt-3'>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
               <button className='mt-2 learn'>Learn more</button>
-              <div className=''>
-              <img className='' src={databiz} />
-              <img className='' src={audiophile} />
-              <img className='' src={meet} />
-              <img className='' src={maker} />
+              <div className='row container m-0 my-5'>
+                <div className='col-3 '>
+                  <img className='w-100' src={databiz} />
+                </div>
+                <div className='col-3'>
+                  <img className='w-100' src={audiophile} />
+                </div>
+                <div className='col-3'>
+                  <img className='w-100' src={meet} />
+                </div>
+                <div className='col-3'>
+                  <img className='w-100' src={maker} />
+                </div>
               </div>
             </div>
           </div>
