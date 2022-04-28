@@ -25,8 +25,8 @@ function InfoNav() {
   return (
     <div>
       <Media queries={{
-        small: "(max-width: 599px)",
-        medium: "(min-width: 600px)"
+        small: "(max-width: 499px)",
+        medium: "(min-width: 500px)"
       }}>
         {matches => (
           <Fragment>
@@ -246,7 +246,7 @@ function InfoNav() {
                     </Nav>
                     <Nav>
                       <Nav.Link href='#'>Login</Nav.Link>
-                      <Nav.Link href='#'>Register</Nav.Link>
+                      <Nav.Link href='#' className="ml-102 px-105 border border-dark rounded-button">Register</Nav.Link>
                     </Nav>
                   
                 
