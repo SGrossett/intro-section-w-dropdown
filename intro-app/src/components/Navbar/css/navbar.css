@@ -15,6 +15,15 @@
 .headless-link {
   padding: 0 !important;;
 }
+.text-gray {
+  color: rgba(0, 0, 0, 0.55);
+}
+.text-gray:hover {
+  color: #000;
+}
+.rounded-button {
+  border-radius: 15px;
+}
 .ml-075 {
   margin-left: 0.75rem;
 }
