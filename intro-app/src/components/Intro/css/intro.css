@@ -12,3 +12,27 @@
   border: none;
   border-radius: 15px;
 }
+
+@media (min-width: 800px) {
+  .content {
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .content > p {
+    margin-top: 2.5rem !important;
+    margin-right: 8rem;
+  }
+  .content > button {
+    margin-top: 2rem !important;
+  }
+  .content > div.container {
+    padding-left: 0rem !important;
+  }
+  .headline {
+    font-size: 4rem;
+  }
+  .headline > span {
+    display: block;
+  }
+}
