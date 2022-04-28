@@ -5,6 +5,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import mobileImg from '../../images/image-hero-mobile.png';
 import deskTopMobile from '../../images/image-hero-desktop.png';
+import databiz from '../../images/client-databiz.svg';
+import audiophile from '../../images/client-audiophile.svg';
+import meet from '../../images/client-meet.svg';
+import maker from '../../images/client-maker.svg';
 
 function Intro() {
   return (
@@ -18,12 +22,17 @@ function Intro() {
             </div>
           </div>
 
-          <div class='col-sm-1'>
+          <div class='col-sm-1 p-0'>
             <div class="col-sm-5 content">
               <h1 className='mt-5 headline'>Make remote work</h1>
               <p className='mt-3'>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
               <button className='mt-2 learn'>Learn more</button>
-              <div>logos</div>
+              <div className=''>
+              <img className='' src={databiz} />
+              <img className='' src={audiophile} />
+              <img className='' src={meet} />
+              <img className='' src={maker} />
+              </div>
             </div>
           </div>
         </div>
