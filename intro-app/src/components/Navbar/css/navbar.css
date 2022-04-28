@@ -33,9 +33,12 @@
 .ml-102 {
   margin-left: 1.2rem;
 }
-.px-105 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.snap-right-margin {
+  margin-right: 0.5rem;
+}
+.container {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 .offcanvas {
   max-width: 70%;
@@ -56,3 +59,49 @@
     box-shadow: none;
 }
 
+@media (min-width: 567px) {
+  .container {
+    max-width: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .register {
+    max-width: none;
+  }
+}
+
+@media (max-width: 669px) {
+  .link-arrows {
+    display: none;
+  }
+}
+
+@media (min-width: 678px) and (max-width: 717px) {
+  .snap-right-margin {
+    margin-right: 0.75rem;
+  }
+  .register-padding {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 809px){
+  .snap-right-margin {
+    margin-right: 1.55rem;
+  }
+  .register-padding {
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+  }
+}
+@media (min-width: 810px) {
+  .snap-right-margin {
+    margin-right: 2rem;
+  }
+  .register-padding {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}

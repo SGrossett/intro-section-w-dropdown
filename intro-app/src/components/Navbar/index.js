@@ -25,8 +25,8 @@ function InfoNav() {
   return (
     <div>
       <Media queries={{
-        small: "(max-width: 499px)",
-        medium: "(min-width: 500px)"
+        small: "(max-width: 575px)",
+        medium: "(min-width: 576px)"
       }}>
         {matches => (
           <Fragment>
@@ -34,7 +34,9 @@ function InfoNav() {
             
             <Navbar collapseOnSet expand='sm' bg='light'>
               <Container fluid>
-                <Navbar.Brand>snap</Navbar.Brand>
+                <Navbar.Brand className='mr-2'>
+                  <h2 className='ml-102'>snap</h2>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls='offcanvasNavbar' />
                 <Navbar.Offcanvas 
                   id='offcanvasNavbar'
@@ -128,9 +130,11 @@ function InfoNav() {
             {matches.medium && 
             
             <Navbar collapseOnSet expand='sm' bg='light'>
-              <Container>
+              <Container >
 
-                <Navbar.Brand>snap</Navbar.Brand>
+                <Navbar.Brand>
+                  <h2 className='snap-right-margin'>snap</h2>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                 <Navbar.Collapse 
                   id='responsive-navbar-nav'
@@ -146,7 +150,7 @@ function InfoNav() {
                               <Popover.Button className='dropdown-link headless-link'>
                                 <span>Features
                                   <span  className='ml-05'>
-                                    { open ? (<img src={arrowUp} />) : (<img src={arrowDown} /> )}
+                                    { open ? (<img className='link-arrows' src={arrowUp} />) : (<img className='link-arrows' src={arrowDown} /> )}
                                   </span>
                                 </span>
                                 
@@ -200,7 +204,7 @@ function InfoNav() {
                               <Popover.Button className='dropdown-link headless-link'>
                                 <span>Company
                                   <span  className='ml-05'>
-                                    { open ? (<img src={arrowUp} />) : (<img src={arrowDown} /> )}
+                                    { open ? (<img className='link-arrows' src={arrowUp} />) : (<img className='link-arrows' src={arrowDown} /> )}
                                   </span>
                                 </span>
                                 
@@ -245,8 +249,8 @@ function InfoNav() {
                       <Nav.Link href='#'>About</Nav.Link>
                     </Nav>
                     <Nav>
-                      <Nav.Link href='#'>Login</Nav.Link>
-                      <Nav.Link href='#' className="ml-102 px-105 border border-dark rounded-button">Register</Nav.Link>
+                      <Nav.Link href='#' >Login</Nav.Link>
+                      <Nav.Link href='#' className="ml-102 px-105 border border-dark rounded-button register-padding">Register</Nav.Link>
                     </Nav>
                   
                 
