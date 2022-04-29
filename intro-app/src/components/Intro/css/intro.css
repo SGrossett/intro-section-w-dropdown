@@ -18,6 +18,10 @@
   border: 1px solid #000;
   background-color: #fff;
 }
+h1 {
+  line-height: 1;
+}
+
 @media screen and (min-width: 768px) {
   .reverse {
     display: flex;
@@ -26,14 +30,10 @@
   }
   .content {
     text-align: left;
-    /* height: 600px; */
     max-width: 80%;
     margin-right: auto;
     margin-left: auto;
     border: 2px solid orange;
-  }
-  .content > p {
-    margin-top: 1.5rem !important;
   }
   .content > div.container {
     padding-left: 0rem !important;
@@ -50,32 +50,32 @@
 /* font sizes */
 @media (min-width: 860px)  and (max-width: 999px) {
   .headline {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
 }
 @media (min-width: 920px)  and (max-width: 999px) {
   .headline {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 1000px)  and (max-width: 1072px) {
   .headline {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }
 @media (min-width: 1073px) and (max-width: 1129px) {
   .headline {
-    font-size: 3.3rem;
+    font-size: 2.9rem;
   }
 }
 @media (min-width: 1130px) and (max-width: 1200px) {
   .headline {
-    font-size: 3.5rem;
+    font-size: 3.1rem;
   }
 }
 @media (min-width: 1200px) and (max-width: 1270px) {
   .headline {
-    font-size: 3.7rem;
+    font-size: 3.3rem;
   }
   .content > p {
     margin-right: 3rem;
@@ -83,7 +83,7 @@
 }
 @media (min-width: 1271px) and (max-width: 1329px) {
   .headline {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .content > p {
     margin-right: 3rem;
@@ -91,7 +91,7 @@
 }
 @media (min-width: 1330px) and (max-width: 1400px) {
   .headline {
-    font-size: 4.2rem;
+    font-size: 3.7rem;
   }
   .content > p {
     margin-right: 4rem;
@@ -99,7 +99,7 @@
 }
 @media (min-width: 1401px) and (max-width: 1470px) {
   .headline {
-    font-size: 4.3rem;
+    font-size: 3.9rem;
   }
 }
 @media (min-width: 1401px) and (max-width: 1829px) {
@@ -109,43 +109,47 @@
 }
 @media (min-width: 1471px) and (max-width: 1533px) {
   .headline {
-    font-size: 4.5rem;
+    font-size: 4.1rem;
   }
 }
 @media (min-width: 1534px) and (max-width: 1629px) {
   .headline {
-    font-size: 4.8rem;
+    font-size: 4.4rem;
   }
 }
 @media (min-width: 1630px) and (max-width: 1829px) {
   .headline {
-    font-size: 5.2rem;
+    font-size: 4.7rem;
   }
 }
 @media (min-width: 1830px) and (max-width: 2000px) {
   .headline {
-    font-size: 5.9rem;
+    font-size: 5.3rem;
   }
   .content > p {
-    margin-right: 8rem;
+    margin-right: 7rem;
+    font-size: 1.4rem !important;
   }
 }
 @media (min-width: 2001px) and (max-width: 2300px) {
   .headline {
-    font-size: 5.9rem;
+    font-size: 5.8rem;
   }
   .content > p {
-    margin-right: 12rem;
-    font-size: 1.4rem !important;
+    margin-right: 8rem;
+    font-size: 1.5rem !important;
   }
 }
 @media (min-width: 2301px) {
   .headline {
-    font-size: 7.5rem;
+    font-size: 6.8rem;
   }
   .content > p {
     font-size: 2rem !important;
     margin-right: 6rem;
+  }
+  .learn {
+    font-size: 1.4rem;
   }
 }
 
@@ -159,14 +163,17 @@
     margin-top: 5rem !important;
   }
   .content > p {
-    margin-top: 2rem !important;
+    margin-top: 1.5rem !important;
   }
   .learn {
     margin-top: 1.5rem !important;
   }
 }
-@media (min-width: 1401px) {
+@media (min-width: 1401px) and (max-width: 1829px)  {
   .content > p {
+    font-size: 1.2rem;
+  }
+  .learn {
     font-size: 1.2rem;
   }
 }
@@ -174,7 +181,10 @@
   .content > div.container {
     margin-top: 8rem !important;
   }
+}
+
+@media (min-width: 1830px) {
   .learn {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
