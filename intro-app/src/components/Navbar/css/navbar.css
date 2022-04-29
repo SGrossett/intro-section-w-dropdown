@@ -64,6 +64,9 @@
     outline: none;
     box-shadow: none;
 }
+h2 {
+  margin-bottom: 0;
+}
 
 @media (min-width: 567px) {
   .container {

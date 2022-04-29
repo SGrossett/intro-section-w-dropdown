@@ -37,7 +37,7 @@ function Intro() {
                 <img className='w-100' src={databiz} />
               </div>
               <div className='col-3'>
-                <img className='w-100' src={audiophile} />
+                <img className='w-100 audiophile' src={audiophile} />
               </div>
               <div className='col-3'>
                 <img className='w-100' src={meet} />
