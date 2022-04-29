@@ -17,6 +17,7 @@ import reminders from '../../images/icon-reminders.svg';
 import planning from '../../images/icon-planning.svg';
 
 function InfoNav() {
+  // eslint-disable-next-line
   let [referenceElement, setReferenceElement] = useState()
   let [popperElement, setPopperElement] = useState()
   let { styles, attributes } = usePopper(referenceElement, popperElement)
@@ -51,7 +52,7 @@ function InfoNav() {
                               <Popover.Button className='dropdown-link headless-link'>
                                 <span>Features
                                   <span  className='ml-05'>
-                                    { open ? (<img  alt='' className='link-arrows' src={arrowUp} />) : (<img  alt='' className='link-arrows' src={arrowDown} /> )}
+                                    { open ? (<img  alt='up arrow' className='link-arrows' src={arrowUp} />) : (<img  alt='down arrow' className='link-arrows' src={arrowDown} /> )}
                                   </span>
                                 </span>
                                 
@@ -106,7 +107,7 @@ function InfoNav() {
                               <Popover.Button className='dropdown-link headless-link'>
                                 <span>Company
                                   <span  className='ml-05'>
-                                    { open ? (<img  alt='' className='link-arrows' src={arrowUp} />) : (<img  alt='' className='link-arrows' src={arrowDown} /> )}
+                                    { open ? (<img  alt='up arrow' className='link-arrows' src={arrowUp} />) : (<img  alt='down arrow' className='link-arrows' src={arrowDown} /> )}
                                   </span>
                                 </span>
                                 

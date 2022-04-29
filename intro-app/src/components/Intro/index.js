@@ -21,8 +21,8 @@ function Intro() {
         <div class="row reverse content">
           <div class="col-md-5 p-0">            
             <div className='image'>
-              {desktopView && <img alt=" className='w-100 h-100 img-responsive' src={desktopImg} />}
-              {mobileView && <img alt=" className='w-100' src={mobileImg} />}
+              {desktopView && <img alt='guy with laptop' className='w-100 h-100 img-responsive' src={desktopImg} />}
+              {mobileView && <img alt='guy with laptop' className='w-100' src={mobileImg} />}
             </div> 
           </div>
 
@@ -34,16 +34,16 @@ function Intro() {
             <button className='mt-2 learn'>Learn more</button>
             <div className='row container m-0 mt-5'>
               <div className='col-3 '>
-                <img alt=" className='w-100' src={databiz} />
+                <img alt='databiz logo' className='w-100' src={databiz} />
               </div>
               <div className='col-3'>
-                <img alt=" className='w-100 audiophile' src={audiophile} />
+                <img alt='audiophile logo' className='w-100 audiophile' src={audiophile} />
               </div>
               <div className='col-3'>
-                <img alt=" className='w-100' src={meet} />
+                <img alt='meet logo' className='w-100' src={meet} />
               </div>
               <div className='col-3'>
-                <img alt=" className='w-100' src={maker} />
+                <img alt='maker logo' className='w-100' src={maker} />
               </div>
             </div>
           </div>

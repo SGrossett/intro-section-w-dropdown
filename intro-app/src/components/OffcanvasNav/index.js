@@ -37,7 +37,7 @@ function OffCanvasNav() {
                     <Disclosure.Button className="dropdown-link headless-link">
                       <span>Features
                         <span  className='ml-05'>
-                          { open ? (<img alt="" src={arrowUp} />) : (<img alt="" src={arrowDown} /> )}
+                          { open ? (<img alt="up arrow" src={arrowUp} />) : (<img alt="down arrow" src={arrowDown} /> )}
                         </span>
                       </span>
                     </Disclosure.Button>
@@ -73,7 +73,7 @@ function OffCanvasNav() {
                     <Disclosure.Button className="dropdown-link headless-link">
                       <span>Company
                         <span  className='ml-05'>
-                          { open ? (<img alt="" src={arrowUp} />) : (<img alt="" src={arrowDown} /> )}
+                          { open ? (<img alt="up arrow" src={arrowUp} />) : (<img alt="down arrow" src={arrowDown} /> )}
                         </span>
                       </span>
                     </Disclosure.Button>
