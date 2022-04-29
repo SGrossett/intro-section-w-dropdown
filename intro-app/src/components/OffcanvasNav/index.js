@@ -37,7 +37,7 @@ function OffCanvasNav() {
                     <Disclosure.Button className="dropdown-link headless-link">
                       <span>Features
                         <span  className='ml-05'>
-                          { open ? (<img src={arrowUp} />) : (<img src={arrowDown} /> )}
+                          { open ? (<img alt="" src={arrowUp} />) : (<img alt="" src={arrowDown} /> )}
                         </span>
                       </span>
                     </Disclosure.Button>
@@ -50,7 +50,7 @@ function OffCanvasNav() {
                                   className="d-flex align-items-center dropdown-item pt-2 text-gray"
                                 >
                                   <div className="d-flex items-center justify-content-center">
-                                    <img
+                                    <img alt=""
                                       src={item.icon}
                                       aria-hidden="true" 
                                     />
@@ -73,7 +73,7 @@ function OffCanvasNav() {
                     <Disclosure.Button className="dropdown-link headless-link">
                       <span>Company
                         <span  className='ml-05'>
-                          { open ? (<img src={arrowUp} />) : (<img src={arrowDown} /> )}
+                          { open ? (<img alt="" src={arrowUp} />) : (<img alt="" src={arrowDown} /> )}
                         </span>
                       </span>
                     </Disclosure.Button>

@@ -51,7 +51,7 @@ function InfoNav() {
                               <Popover.Button className='dropdown-link headless-link'>
                                 <span>Features
                                   <span  className='ml-05'>
-                                    { open ? (<img className='link-arrows' src={arrowUp} />) : (<img className='link-arrows' src={arrowDown} /> )}
+                                    { open ? (<img  alt='' className='link-arrows' src={arrowUp} />) : (<img  alt='' className='link-arrows' src={arrowDown} /> )}
                                   </span>
                                 </span>
                                 
@@ -80,7 +80,8 @@ function InfoNav() {
                                           className="d-flex align-items-center dropdown-item"
                                         >
                                           <div className="d-flex items-center justify-content-center">
-                                            <img
+                                            <img 
+                                              alt=''
                                               src={item.icon}
                                               aria-hidden="true" 
                                             />
@@ -105,7 +106,7 @@ function InfoNav() {
                               <Popover.Button className='dropdown-link headless-link'>
                                 <span>Company
                                   <span  className='ml-05'>
-                                    { open ? (<img className='link-arrows' src={arrowUp} />) : (<img className='link-arrows' src={arrowDown} /> )}
+                                    { open ? (<img  alt='' className='link-arrows' src={arrowUp} />) : (<img  alt='' className='link-arrows' src={arrowDown} /> )}
                                   </span>
                                 </span>
                                 

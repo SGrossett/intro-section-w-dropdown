@@ -15,14 +15,14 @@ function Intro() {
   const desktopView = useMediaQuery({ query: '(min-width: 768px)' })
   const mobileView = useMediaQuery({ query: '(max-width: 767px)' })
   return (
-    <div class="mt-3">
+    <div class="mt-4">
       <Container className='d-flex justify-content-center'>
 
         <div class="row reverse content">
           <div class="col-md-5 p-0">            
             <div className='image'>
-              {desktopView && <img className='w-100 h-100 img-responsive' src={desktopImg} />}
-              {mobileView && <img className='w-100' src={mobileImg} />}
+              {desktopView && <img alt=" className='w-100 h-100 img-responsive' src={desktopImg} />}
+              {mobileView && <img alt=" className='w-100' src={mobileImg} />}
             </div> 
           </div>
 
@@ -34,16 +34,16 @@ function Intro() {
             <button className='mt-2 learn'>Learn more</button>
             <div className='row container m-0 mt-5'>
               <div className='col-3 '>
-                <img className='w-100' src={databiz} />
+                <img alt=" className='w-100' src={databiz} />
               </div>
               <div className='col-3'>
-                <img className='w-100 audiophile' src={audiophile} />
+                <img alt=" className='w-100 audiophile' src={audiophile} />
               </div>
               <div className='col-3'>
-                <img className='w-100' src={meet} />
+                <img alt=" className='w-100' src={meet} />
               </div>
               <div className='col-3'>
-                <img className='w-100' src={maker} />
+                <img alt=" className='w-100' src={maker} />
               </div>
             </div>
           </div>
