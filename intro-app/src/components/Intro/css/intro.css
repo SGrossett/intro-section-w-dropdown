@@ -10,8 +10,13 @@
   padding: 0.6rem 1.5rem;
   border: none;
   border-radius: 15px;
+  font-weight: 500;
 }
-
+.learn:hover {
+  color: #000;
+  border: 1px solid #000;
+  background-color: #fff;
+}
 @media screen and (min-width: 768px) {
   .reverse {
     display: flex;
@@ -167,5 +172,8 @@
 @media (min-width: 1500px) {
   .content > div.container {
     margin-top: 8rem !important;
+  }
+  .learn {
+    font-size: 1.2rem;
   }
 }
