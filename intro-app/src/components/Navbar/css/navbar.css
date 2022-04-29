@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@800&display=swap');
+
 .dropdown-link {
   border: none;
   cursor: pointer;
@@ -35,6 +37,10 @@
 }
 .snap-right-margin {
   margin-right: 0.5rem;
+}
+.brand-name {
+  font-family: 'Epilogue', sans-serif;
+  /* font-size: 2rem; */
 }
 .m-nav-container {
   padding-left: 2.5rem;

@@ -34,7 +34,7 @@ function InfoNav() {
               <Navbar collapseOnSet expand='sm' bg='light'>
                 <Container className='m-nav-container'>
                   <Navbar.Brand>
-                    <h2 className='snap-right-margin'>snap</h2>
+                    <h2 className='snap-right-margin brand-name'>snap</h2>
                   </Navbar.Brand>
                   <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                   <Navbar.Collapse 
