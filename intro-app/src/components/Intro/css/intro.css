@@ -140,3 +140,19 @@
     margin-right: 12rem;
   }
 }
+
+/* center content */
+@media (min-width: 1300px) and (max-width: 1499px) {
+  .content { 
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .content > div.container {
+    margin-top: 5rem !important;
+  }
+}
+@media (min-width: 1500px) {
+  .content > div.container {
+    margin-top: 8rem !important;
+  }
+}
